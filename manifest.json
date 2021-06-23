@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "KanjiTooltips",
+	"version": "1.0",
+	"icons": {
+		"32": "images/icon32.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": ["dist/content-script.js"]
+		}
+	]
+}

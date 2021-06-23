@@ -1,0 +1,18 @@
+{
+  "name": "kanji-tooltips-browser-addon",
+  "version": "1.0.0",
+  "author": "Pyry Vähäkangas",
+  "repository": "https://github.com/pyigyli/KanjiTooltips",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "dependencies": {
+    "kanji.js": "^1.3.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "rollup": "^2.52.2"
+  }
+}
