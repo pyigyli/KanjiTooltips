@@ -13,6 +13,6 @@ Source files are compiled into a single file with [rollup.js](https://rollupjs.o
 First clone the repository and move to the root folder.
 Install all the dependencies with `yarn install`.
 Compile the source files with `yarn build`.
-Go to the browsers extensions settings and load the repository's root folder, which contains the `manifest.json`.
+Go to the browser's extensions settings and load the repository's root folder, which contains the `manifest.json`.
 
 Note that all browsers do not support installing extensions straight from your own filesystem or you might need to enable developer mode to do that.

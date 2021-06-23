@@ -17,25 +17,23 @@ kanjiContainer.style = `
 `
 document.body.append(kanjiContainer)
 
-const getHighlightedKanji = () => {
-  const selection = document.getSelection()
-  if (selection.toString().length === 1) {
-    const kanjiDetails = kanji.getDetails(selection.toString())
+document.onmouseup = () => {
+  const selection = document.getSelection().toString()
+  let kanjiDetails
+  if (selection.length === 1) {
+    kanjiDetails = kanji.getDetails(selection)
     if (kanjiDetails) {
       kanjiContainer.innerHTML = `
         <span style="font-size: 20px;">${kanjiDetails.literal}</span>
         <br/>
         <span>Meanings: ${kanjiDetails.meanings.join(', ')}</span>
         <br/>
-        <span>Readings ${[...kanjiDetails.kunyomi, ...kanjiDetails.onyomi ].join(', ')}</span>
+        <span>Readings: ${[...kanjiDetails.kunyomi, ...kanjiDetails.onyomi ].join(', ')}</span>
       `
       kanjiContainer.hidden = false
-    } else {
-      kanjiContainer.hidden = true
     }
-  } else {
+  }
+  if (selection.length !== 1 || !kanjiDetails) {
     kanjiContainer.hidden = true
   }
 }
-
-document.onmouseup = getHighlightedKanji
