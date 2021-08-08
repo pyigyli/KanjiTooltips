@@ -28,7 +28,9 @@ document.onmouseup = () => {
         <br/>
         <span>Meanings: ${kanjiDetails.meanings.join(', ')}</span>
         <br/>
-        <span>Readings: ${[...kanjiDetails.kunyomi, ...kanjiDetails.onyomi ].join(', ')}</span>
+        <span>Kunyomi: ${[...kanjiDetails.kunyomi].join(', ')}</span>
+        <br/>
+        <span>Onyomi: ${[...kanjiDetails.onyomi].join(', ')}</span>
       `
       kanjiContainer.hidden = false
     }
